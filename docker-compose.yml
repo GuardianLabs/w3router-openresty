@@ -1,0 +1,11 @@
+services:
+  proxy:
+    build: .
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - ./conf:/usr/local/openresty/nginx/conf
+      - ./html:/usr/local/openresty/nginx/html
+      - ./lib:/usr/local/openresty/site/lualib/eth
+    tmpfs:
+      - /tmp
