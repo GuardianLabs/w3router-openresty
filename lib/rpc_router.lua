@@ -1,6 +1,6 @@
 local ngx = ngx
-local isempty = require 'isempty'
-local isarray = require 'isarray'
+local isempty = require 'table.isempty'
+local isarray = require 'table.isarray'
 local http = require 'resty.http'
 local cjson = require 'cjson.safe'
 
